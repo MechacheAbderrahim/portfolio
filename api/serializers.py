@@ -1,5 +1,13 @@
 from rest_framework import serializers
-from .models import PortfolioItem, Technology, Skill, UserProfile
+from .models import (
+    PortfolioItem,
+    Technology,
+    Skill,
+    UserProfile,
+    Education,
+    Language,
+    Publication,
+)
 
 
 class TechnologySerializer(serializers.ModelSerializer):
@@ -50,3 +58,21 @@ class PortfolioItemSerializer(serializers.ModelSerializer):
             'created_at',
             'updated_at',
         ]
+
+
+class EducationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Education
+        fields = '__all__'
+
+
+class LanguageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Language
+        fields = '__all__'
+
+
+class PublicationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publication
+        fields = '__all__'

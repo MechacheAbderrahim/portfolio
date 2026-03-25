@@ -18,13 +18,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from api.views import PortfolioItemViewSet, UserProfileViewSet, SkillViewSet, TechnologyViewSet
+from api.views import PortfolioItemViewSet, UserProfileViewSet, SkillViewSet, TechnologyViewSet, EducationViewSet, LanguageViewSet, PublicationViewSet
 
 router = DefaultRouter()
 router.register(r'portfolio', PortfolioItemViewSet)
 router.register(r'profiles', UserProfileViewSet)
 router.register(r'skills', SkillViewSet)
 router.register(r'technologies', TechnologyViewSet)
+router.register(r'education', EducationViewSet)
+router.register(r'languages', LanguageViewSet)
+router.register(r'publications', PublicationViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
