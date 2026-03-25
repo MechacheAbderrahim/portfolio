@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from api.views import PortfolioItemViewSet, UserProfileViewSet, SkillViewSet, TechnologyViewSet, EducationViewSet, LanguageViewSet, PublicationViewSet
+from api.views import PortfolioItemViewSet, UserProfileViewSet, SkillViewSet, TechnologyViewSet, EducationViewSet, LanguageViewSet, PublicationViewSet, ExpertiseView
 
 router = DefaultRouter()
 router.register(r'portfolio', PortfolioItemViewSet)
@@ -32,4 +32,5 @@ router.register(r'publications', PublicationViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/expertise/', ExpertiseView.as_view()),
 ]
