@@ -6,6 +6,7 @@ from .serializers import PortfolioItemSerializer, UserProfileSerializer, SkillSe
 class PortfolioItemViewSet(viewsets.ModelViewSet):
     queryset = PortfolioItem.objects.all().select_related('user').prefetch_related('skills', 'technologies')
     serializer_class = PortfolioItemSerializer
+    lookup_field = 'slug'
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
