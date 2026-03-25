@@ -18,10 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from api.views import PortfolioItemViewSet
+from api.views import PortfolioItemViewSet, UserProfileViewSet
 
 router = DefaultRouter()
 router.register(r'portfolio', PortfolioItemViewSet)
+router.register(r'profiles', UserProfileViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
