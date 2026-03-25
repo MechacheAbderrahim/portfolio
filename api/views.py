@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import PortfolioItem
+from .serializers import PortfolioItemSerializer
 
-# Create your views here.
+class PortfolioItemViewSet(viewsets.ModelViewSet):
+    queryset = PortfolioItem.objects.all()
+    serializer_class = PortfolioItemSerializer
