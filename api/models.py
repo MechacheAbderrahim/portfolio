@@ -50,6 +50,8 @@ class Technology(models.Model):
     category = models.CharField(max_length=100, blank=True)
     icon_url = models.URLField(blank=True)
 
+    display = models.BooleanField(default=False)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -63,6 +65,8 @@ class Technology(models.Model):
 class Skill(models.Model):
     name = models.CharField(max_length=100, unique=True)
     category = models.CharField(max_length=100, blank=True)
+
+    display = models.BooleanField(default=False)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
