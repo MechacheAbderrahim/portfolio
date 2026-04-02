@@ -17,6 +17,7 @@ const skills = computed(() => skillsData.value || [])
 const technologies = computed(() => technologiesData.value || [])
 const languages = computed(() => languagesData.value || [])
 const pubications = computed(() => pubicationsData.value || [])
+const contactEmail = computed(() => profiles.value?.[0]?.email || '')
 </script>
 
 <template>
@@ -26,7 +27,7 @@ const pubications = computed(() => pubicationsData.value || [])
     <PortfolioSection :portfolio="portfolio" />
     <EducationSection :education="education" />
     <SkillsSection :skills="skills" :technologies="technologies" :languages="languages" />
-    <ContactSection :pubications="pubications" :email="profiles[0].email"/>
+    <ContactSection :pubications="pubications" :email="contactEmail" />
   </div>
   
 </template>
