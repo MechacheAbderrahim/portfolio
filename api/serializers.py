@@ -19,13 +19,13 @@ class TechnologySerializer(serializers.ModelSerializer):
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
-        fields = ['id', 'name', 'category']
+        fields = ['id', 'name', 'category', 'display']
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
-        fields = ['id', 'full_name', 'title', 'subtitle', 'email', 'location']
+        fields = ['id', 'full_name', 'title', 'subtitle', 'email', 'location', 'linkedin_url', 'github_url', 'google_scholar_url', 'cv_url']
 
 
 class PortfolioItemSerializer(serializers.ModelSerializer):
