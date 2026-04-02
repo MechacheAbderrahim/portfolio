@@ -157,7 +157,7 @@ class Publication(models.Model):
     type = models.CharField(max_length=50, blank=True)
 
     order_index = models.IntegerField(default=0)
-
+    authors = models.TextField(blank=True, default="A. Mechache & H. Kheddouci")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -82,7 +82,7 @@ const getLanguageWidth = (level) => {
 
           <div v-if="sortedTechnologies.length" class="tech-tags">
             <span v-for="tech in sortedTechnologies" :key="tech.id" class="tech-tag">
-              {{ tech.name }} {{ tech.order_index }}
+              {{ tech.name }}
             </span>
           </div>
 

@@ -26,7 +26,7 @@ const pubications = computed(() => pubicationsData.value || [])
     <PortfolioSection :portfolio="portfolio" />
     <EducationSection :education="education" />
     <SkillsSection :skills="skills" :technologies="technologies" :languages="languages" />
-    <ContactSection :pubications="pubications"/>
+    <ContactSection :pubications="pubications" :email="profiles[0].email"/>
   </div>
   
 </template>

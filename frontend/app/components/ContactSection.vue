@@ -5,6 +5,10 @@ const props = defineProps({
   pubications: {
     type: Array,
     default: () => []
+  },
+  email: {
+    type: String,
+    default: ''
   }
 })
 
@@ -21,7 +25,7 @@ const sortedPublications = computed(() => {
 
         <!-- LEFT: Publications -->
         <div class="contact-left">
-          <h2>Publications & Références</h2>
+          <h2>Publications & References</h2>
 
           <div class="publications-list">
             <div
@@ -32,9 +36,11 @@ const sortedPublications = computed(() => {
               <span class="publication-index">[{{ index + 1 }}]</span>
 
               <p class="publication-text">
-                "{{ pub.title }}"<br />
+                <span v-if="pub.authors" class="publication-author"> {{ pub.authors }}</span>
+                "{{ pub.title }}"
                 <span class="publication-desc">{{ pub.description }}</span>
                 <span v-if="pub.year">, {{ pub.year }}</span>
+                
               </p>
             </div>
           </div>
@@ -46,12 +52,14 @@ const sortedPublications = computed(() => {
             <h3>Parlons Recherche</h3>
 
             <p>
-              Je suis ouvert aux collaborations académiques, aux échanges sur les GNN
-              ou aux opportunités de carrière en Deep Learning.
+              I am open to academic collaborations, discussions about GNNs, GenIA, LLM or other career opportunities in deep learning.
             </p>
 
-            <a href="#" class="contact-button">
-              REPRENDRE CONTACT +
+            <a
+              :href="`mailto:${props.email}?subject=Contact from your portfolio&body=Hello, I would like to discuss...`"
+              class="contact-button"
+            >
+              GET IN TOUCH + 
             </a>
           </div>
         </div>
@@ -105,9 +113,16 @@ const sortedPublications = computed(() => {
   opacity: 0.8;
 }
 
+
+.publication-author {
+  opacity: 0.8;
+  color: black;
+}
+
 .publication-text {
   margin: 0;
 }
+
 
 .publication-desc {
   opacity: 0.9;
