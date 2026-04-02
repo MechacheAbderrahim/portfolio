@@ -74,11 +74,13 @@ const sortedPublications = computed(() => {
 .contact-section {
   padding: var(--space-section-y) var(--space-section-x);
   background: var(--color-bg);
+  overflow-x: hidden;
 }
 
 .contact-container {
   max-width: var(--container-width);
   margin: 0 auto;
+  min-width: 0;
 }
 
 .contact-grid {
@@ -89,6 +91,12 @@ const sortedPublications = computed(() => {
   grid-template-columns: 1.3fr 1fr;
   gap: 40px;
   color: white;
+  box-sizing: border-box;
+}
+
+.contact-left,
+.contact-right {
+  min-width: 0;
 }
 
 .contact-left h2 {
@@ -107,6 +115,7 @@ const sortedPublications = computed(() => {
   gap: 10px;
   font-size: 0.95rem;
   line-height: 1.6;
+  align-items: flex-start;
 }
 
 .publication-index {
@@ -121,6 +130,9 @@ const sortedPublications = computed(() => {
 
 .publication-text {
   margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 
@@ -162,8 +174,29 @@ const sortedPublications = computed(() => {
 }
 
 @media (max-width: 900px) {
+  .contact-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
+    padding: 24px 20px;
+    gap: 28px;
+  }
+
+  .contact-left h2 {
+    font-size: 1.8rem;
+    line-height: 1.05;
+  }
+
+  .publication-item {
+    gap: 8px;
+    font-size: 0.92rem;
+  }
+
+  .contact-card {
+    padding: 22px 18px;
   }
 }
 </style>
