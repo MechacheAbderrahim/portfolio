@@ -95,13 +95,16 @@ const description = computed(() => {
 <style scoped>
 #home {
   padding: var(--space-section-y) var(--space-section-x);
+  overflow-x: hidden;
   background: var(--color-bg);
 }
 
 #home > div {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 40px; /* 🔥 ajout padding interne */
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
 }
 
 #home > div > div:first-child {
@@ -114,6 +117,7 @@ const description = computed(() => {
 /* Bloc texte */
 #home > div > div:first-child > div:first-child {
   max-width: 640px;
+  width: 100%;
 }
 
 #home h1 {
@@ -187,7 +191,8 @@ const description = computed(() => {
 
 #home img {
   display: block;
-  width: min(100%, 410px);
+  width: 100%;
+  max-width: 410px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 2px;
@@ -196,20 +201,43 @@ const description = computed(() => {
 /* responsive */
 @media (max-width: 980px) {
   #home {
-    padding: 72px 24px 56px;
+    padding: 56px 16px 40px;
   }
 
   #home > div {
-    padding: 24px;
+    padding: 0;
   }
 
   #home > div > div:first-child {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
+  }
+
+  #home > div > div:first-child > div:first-child {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #home h1 {
+    font-size: clamp(2.9rem, 14vw, 4.4rem);
+    line-height: 0.95;
+  }
+
+  #home > div > div:first-child > div:first-child > p:nth-of-type(1),
+  #home > div > div:first-child > div:first-child > p:nth-of-type(2) {
+    max-width: 100%;
+  }
+
+  #home > div > div:first-child > div:first-child > div {
+    justify-content: center;
+  }
+
+  #home > div > div:first-child > div:last-child {
+    justify-content: center;
   }
 
   #home img {
-    width: min(100%, 340px);
+    max-width: 100%;
   }
 }
 </style>
