@@ -1,0 +1,602 @@
+[
+{
+  "model": "api.userprofile",
+  "pk": 2,
+  "fields": {
+    "full_name": "Abderrahim Mechache",
+    "title": "PhD Student in Computer Science",
+    "subtitle": "Graphs, 3D modeling, computer vision, and artificial intelligence",
+    "description": "PhD student at Université Claude Bernard Lyon 1, working at LIRIS on the modeling and analysis of complex 3D structures, with interests in deep learning, graph neural networks, computer vision, and graph theory.",
+    "email": "abderrahim.mechache@univ-lyon1.fr",
+    "location": "Lyon, France",
+    "linkedin_url": "https://www.linkedin.com/in/abderrahim-mechache-8ba896208/",
+    "github_url": "https://github.com/MechacheAbderrahim",
+    "google_scholar_url": "https://scholar.google.com/citations?user=LCXKBd4AAAAJ&hl=fr&oi=ao",
+    "cv_url": "",
+    "photo_url": "",
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-27T07:19:40.339Z"
+  }
+},
+{
+  "model": "api.education",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "degree": "PhD",
+    "field": "Computer Science",
+    "institution": "LIRIS, UMR 5205 CNRS, Université Claude Bernard Lyon 1, France",
+    "description": "Focused on graph-based deep learning for 3D protein surface analysis, combining geometric deep learning, graph neural networks, and computer vision applied to structural bioinformatics.",
+    "start_date": "2024-01-01",
+    "end_date": null,
+    "is_current": true,
+    "rank_info": "",
+    "order_index": 0,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-01T13:07:15.447Z"
+  }
+},
+{
+  "model": "api.education",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "degree": "Master in Computer Science",
+    "field": "Advanced Information Systems (SIA)",
+    "institution": "Université Abderrahmane MIRA, Béjaïa, Algeria",
+    "description": "Specialized in software engineering, database administration, artificial intelligence, and machine learning, with a strong emphasis on system design and data-driven applications.",
+    "start_date": "2021-01-01",
+    "end_date": "2023-12-31",
+    "is_current": false,
+    "rank_info": "Rank: 2/38",
+    "order_index": 1,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-01T13:04:20.063Z"
+  }
+},
+{
+  "model": "api.education",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "degree": "Bachelor in Computer Science",
+    "field": "Information Systems (SI)",
+    "institution": "Université Abderrahmane MIRA, Béjaïa, Algeria",
+    "description": "Covered core computer science fundamentals including programming, algorithms, databases, and web development, building a solid foundation in software and information systems.",
+    "start_date": "2019-01-01",
+    "end_date": "2021-12-31",
+    "is_current": false,
+    "rank_info": "Rank: 2/72",
+    "order_index": 2,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-01T13:04:29.986Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 3,
+  "fields": {
+    "name": "Python",
+    "category": "language",
+    "icon_url": "",
+    "display": true,
+    "order_index": 1,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:37:06.388Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 4,
+  "fields": {
+    "name": "PyTorch",
+    "category": "framework",
+    "icon_url": "",
+    "display": true,
+    "order_index": 2,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:37:11.974Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 5,
+  "fields": {
+    "name": "PyTorch Geometric",
+    "category": "framework",
+    "icon_url": "",
+    "display": true,
+    "order_index": 3,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:37:15.215Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 6,
+  "fields": {
+    "name": "TensorFlow",
+    "category": "framework",
+    "icon_url": "",
+    "display": false,
+    "order_index": 6,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:42:08.569Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 7,
+  "fields": {
+    "name": "SQL",
+    "category": "database",
+    "icon_url": "",
+    "display": true,
+    "order_index": 5,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:41:39.719Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 8,
+  "fields": {
+    "name": "R",
+    "category": "language",
+    "icon_url": "",
+    "display": false,
+    "order_index": 7,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:42:25.378Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 9,
+  "fields": {
+    "name": "Java",
+    "category": "language",
+    "icon_url": "",
+    "display": false,
+    "order_index": 12,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:43:37.546Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 10,
+  "fields": {
+    "name": "Scikit-learn",
+    "category": "framework",
+    "icon_url": "",
+    "display": true,
+    "order_index": 4,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:41:46.402Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 11,
+  "fields": {
+    "name": "Pygame",
+    "category": "tool",
+    "icon_url": "",
+    "display": false,
+    "order_index": 15,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:44:11.673Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 12,
+  "fields": {
+    "name": "UML",
+    "category": "tool",
+    "icon_url": "",
+    "display": false,
+    "order_index": 14,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:44:05.312Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 13,
+  "fields": {
+    "name": "HTML",
+    "category": "frontend",
+    "icon_url": "",
+    "display": false,
+    "order_index": 10,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:43:21.299Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 14,
+  "fields": {
+    "name": "CSS",
+    "category": "frontend",
+    "icon_url": "",
+    "display": false,
+    "order_index": 11,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:43:26.374Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 15,
+  "fields": {
+    "name": "JavaScript",
+    "category": "frontend",
+    "icon_url": "",
+    "display": true,
+    "order_index": 9,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:42:56.217Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 16,
+  "fields": {
+    "name": "VueJS",
+    "category": "framework",
+    "icon_url": "",
+    "display": false,
+    "order_index": 13,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:43:56.084Z"
+  }
+},
+{
+  "model": "api.technology",
+  "pk": 17,
+  "fields": {
+    "name": "Django",
+    "category": "framework",
+    "icon_url": "",
+    "display": true,
+    "order_index": 8,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:42:45.654Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 3,
+  "fields": {
+    "name": "Deep Learning",
+    "category": "dl",
+    "display": true,
+    "order_index": 1,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:37:52.196Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 4,
+  "fields": {
+    "name": "Graph Neural Networks",
+    "category": "graph",
+    "display": true,
+    "order_index": 4,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:38:12.145Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 5,
+  "fields": {
+    "name": "Computer Vision",
+    "category": "cv",
+    "display": true,
+    "order_index": 2,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:38:14.830Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 6,
+  "fields": {
+    "name": "Graph Theory",
+    "category": "graph",
+    "display": true,
+    "order_index": 5,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:38:18.645Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 7,
+  "fields": {
+    "name": "Database Systems",
+    "category": "backend",
+    "display": true,
+    "order_index": 6,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:38:22.693Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 8,
+  "fields": {
+    "name": "Web Technologies",
+    "category": "frontend",
+    "display": true,
+    "order_index": 8,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:38:33.910Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 9,
+  "fields": {
+    "name": "Decision-Making Systems",
+    "category": "ai",
+    "display": false,
+    "order_index": 9,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-02T10:38:37.280Z"
+  }
+},
+{
+  "model": "api.skill",
+  "pk": 10,
+  "fields": {
+    "name": "MLOps",
+    "category": "ai",
+    "display": true,
+    "order_index": 3,
+    "created_at": "2026-04-02T09:39:37.278Z",
+    "updated_at": "2026-04-02T10:38:03.871Z"
+  }
+},
+{
+  "model": "api.portfolioitem",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "title": "PhD Project – GRADIENT",
+    "slug": "phd-project-gradient",
+    "subtitle": "Graphs and algorithms for protein 3D structure classification and dynamics",
+    "organization": "LIRIS / Université Claude Bernard Lyon 1",
+    "description": "Doctoral research project on graphs and algorithms for the classification and dynamics of protein 3D structures.",
+    "type": "research",
+    "employment_type": "phd",
+    "location": "Lyon, France",
+    "start_date": "2024-01-01",
+    "end_date": null,
+    "is_current": true,
+    "image_url": "",
+    "project_url": "https://gradient.projet.liris.cnrs.fr",
+    "highlight": true,
+    "order_index": 1,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-26T07:40:20.460Z",
+    "technologies": [
+      3,
+      4,
+      5
+    ],
+    "skills": [
+      3,
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "api.portfolioitem",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "title": "Teaching Assistant",
+    "slug": "teaching-assistant-database-web-technologies",
+    "subtitle": "Database and Web Technologies practical sessions",
+    "organization": "Computer Science Department, Université Lyon 1",
+    "description": "Teaching practical sessions for the course \"Database and Web Technologies\" for second-year undergraduate students.",
+    "type": "teaching",
+    "employment_type": "temporary",
+    "location": "Lyon, France",
+    "start_date": "2025-09-01",
+    "end_date": "2025-12-31",
+    "is_current": false,
+    "image_url": "",
+    "project_url": "",
+    "highlight": false,
+    "order_index": 2,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-26T07:40:04.339Z",
+    "technologies": [
+      7,
+      13,
+      14,
+      15
+    ],
+    "skills": [
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "api.portfolioitem",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "title": "Decision-Making in Autonomous Vehicles",
+    "slug": "decision-making-autonomous-vehicles",
+    "subtitle": "Master research thesis",
+    "organization": "Université de Béjaïa",
+    "description": "Master research thesis on decision-making in autonomous vehicles.",
+    "type": "academic",
+    "employment_type": "",
+    "location": "Béjaïa, Algeria",
+    "start_date": "2023-01-01",
+    "end_date": "2023-06-30",
+    "is_current": false,
+    "image_url": "",
+    "project_url": "",
+    "highlight": true,
+    "order_index": 3,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-26T07:40:14.086Z",
+    "technologies": [
+      3,
+      4,
+      11
+    ],
+    "skills": [
+      9,
+      3
+    ]
+  }
+},
+{
+  "model": "api.portfolioitem",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "title": "DSS – Decision Support Information System",
+    "slug": "dss-decision-support-information-system",
+    "subtitle": "Master project",
+    "organization": "Université de Béjaïa",
+    "description": "Master project focused on a decision support information system.",
+    "type": "industry",
+    "employment_type": "",
+    "location": "Béjaïa, Algeria",
+    "start_date": "2022-10-01",
+    "end_date": "2023-02-28",
+    "is_current": false,
+    "image_url": "",
+    "project_url": "",
+    "highlight": false,
+    "order_index": 4,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-26T07:52:09.648Z",
+    "technologies": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      3,
+      17,
+      10
+    ],
+    "skills": [
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "api.language",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "name": "Kabyle",
+    "level": "Native",
+    "order_index": 4,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-01T13:23:01.475Z"
+  }
+},
+{
+  "model": "api.language",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "name": "Arabic",
+    "level": "Native",
+    "order_index": 3,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-01T13:22:51.567Z"
+  }
+},
+{
+  "model": "api.language",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "name": "French",
+    "level": "Fluent",
+    "order_index": 1,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-01T13:22:45.408Z"
+  }
+},
+{
+  "model": "api.language",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "name": "English",
+    "level": "Intermediate",
+    "order_index": 2,
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-04-01T13:22:41.642Z"
+  }
+},
+{
+  "model": "api.publication",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "title": "Edge-enriched mesh representation for protein surface classification",
+    "description": "In Proceedings of the 37th IEEE International Conference on Tools with Artificial Intelligence (ICTAI). Accepted for publication.",
+    "link": "",
+    "year": 2025,
+    "type": "paper",
+    "order_index": 0,
+    "authors": "A. Mechache & H. Kheddouci",
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-25T12:07:04.984Z"
+  }
+},
+{
+  "model": "api.publication",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "title": "Enhancing protein classification with graph convolutional neural networks",
+    "description": "In International Conference on Pattern Recognition (ICPR), pages 109–124. Springer.",
+    "link": "",
+    "year": 2024,
+    "type": "paper",
+    "order_index": 1,
+    "authors": "A. Mechache & H. Kheddouci",
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-25T12:07:04.984Z"
+  }
+},
+{
+  "model": "api.publication",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "title": "Enhancing decision-making in autonomous vehicles: A study on the integration of k-nearest neighbor algorithm and reinforcement learning",
+    "description": "In Colloque sur les Objets et Systèmes Connectés.",
+    "link": "",
+    "year": 2023,
+    "type": "paper",
+    "order_index": 2,
+    "authors": "A. Mechache & H. Kheddouci",
+    "created_at": "2026-03-25T12:07:04.984Z",
+    "updated_at": "2026-03-25T12:07:04.984Z"
+  }
+}
+]
