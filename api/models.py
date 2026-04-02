@@ -51,6 +51,7 @@ class Technology(models.Model):
     icon_url = models.URLField(blank=True)
 
     display = models.BooleanField(default=False)
+    order_index = models.IntegerField(default=0)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -67,6 +68,7 @@ class Skill(models.Model):
     category = models.CharField(max_length=100, blank=True)
 
     display = models.BooleanField(default=False)
+    order_index = models.IntegerField(default=0)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

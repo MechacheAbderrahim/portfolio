@@ -1,5 +1,3 @@
-
-
 <script setup>
 import { computed } from 'vue'
 
@@ -21,11 +19,21 @@ const props = defineProps({
 const sortedSkills = computed(() => {
   return [...props.skills]
     .filter(skill => skill.display)
-    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => {
+      const orderA = a.order_index ?? 9999
+      const orderB = b.order_index ?? 9999
+      if (orderA !== orderB) return orderA - orderB
+      return a.name.localeCompare(b.name)
+    })
 })
 
 const sortedTechnologies = computed(() => {
-  return [...props.technologies].sort((a, b) => a.name.localeCompare(b.name))
+  return [...props.technologies].sort((a, b) => {
+    const orderA = a.order_index ?? 9999
+    const orderB = b.order_index ?? 9999
+    if (orderA !== orderB) return orderA - orderB
+    return a.name.localeCompare(b.name)
+  })
 })
 
 const sortedLanguages = computed(() => {
@@ -74,7 +82,7 @@ const getLanguageWidth = (level) => {
 
           <div v-if="sortedTechnologies.length" class="tech-tags">
             <span v-for="tech in sortedTechnologies" :key="tech.id" class="tech-tag">
-              {{ tech.name }}
+              {{ tech.name }} {{ tech.order_index }}
             </span>
           </div>
 

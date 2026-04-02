@@ -13,13 +13,13 @@ from .models import (
 class TechnologySerializer(serializers.ModelSerializer):
     class Meta:
         model = Technology
-        fields = ['id', 'name', 'category', 'icon_url']
+        fields = ['id', 'name', 'category', 'icon_url', 'order_index']
 
 
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
-        fields = ['id', 'name', 'category', 'display']
+        fields = ['id', 'name', 'category', 'display', 'order_index']
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
