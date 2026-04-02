@@ -28,8 +28,8 @@ const linkedinUrl = computed(() => {
 })
 
 const cvUrl = computed(() => {
-  if (!profile.value) return '#'
-  return profile.value.cv_url || profile.value.cv || '#'
+  if (!profile.value) return '/abderrahim_mechache_cv.pdf'
+  return profile.value.cv_url || profile.value.cv || '/abderrahim_mechache_cv.pdf'
 })
 
 const academicUrl = computed(() => {

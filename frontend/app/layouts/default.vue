@@ -1,13 +1,51 @@
-
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 
 const config = useRuntimeConfig()
 const base = config.public.apiBase
 
 const { data: profileData } = await useFetch(`${base}/profiles`)
-
 const profile = computed(() => profileData.value?.[0] || null)
+
+const activeSection = ref('home')
+
+const navItems = [
+  { id: 'home', label: 'Home' },
+  { id: 'experience', label: 'Experience & Projects' },
+  { id: 'education', label: 'Education' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' }
+]
+
+let observer
+
+onMounted(() => {
+  const sections = navItems
+    .map(item => document.getElementById(item.id))
+    .filter(Boolean)
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+      if (visibleEntry) {
+        activeSection.value = visibleEntry.target.id
+      }
+    },
+    {
+      threshold: 0.35,
+      rootMargin: '-10% 0px -45% 0px'
+    }
+  )
+
+  sections.forEach(section => observer.observe(section))
+})
+
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect()
+})
 </script>
 
 
@@ -18,11 +56,15 @@ const profile = computed(() => profileData.value?.[0] || null)
         <a href="#home" class="site-brand">Call Me Rahim !</a>
 
         <nav class="site-nav" aria-label="Main navigation">
-          <a href="#home" class="nav-link nav-link-active">Home</a>
-          <a href="#education" class="nav-link">Education</a>
-          <a href="#experience" class="nav-link">Experience & Projects</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a
+            v-for="item in navItems"
+            :key="item.id"
+            :href="`#${item.id}`"
+            class="nav-link"
+            :class="{ 'nav-link-active': activeSection === item.id }"
+          >
+            {{ item.label }}
+          </a>
         </nav>
       </div>
     </header>
