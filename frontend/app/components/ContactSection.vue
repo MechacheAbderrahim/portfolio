@@ -18,7 +18,7 @@ const sortedPublications = computed(() => {
 </script>
 
 <template>
-  <section class="contact-section">
+  <section class="contact-section" id="contact">
     <div class="contact-container">
 
       <div class="contact-grid">

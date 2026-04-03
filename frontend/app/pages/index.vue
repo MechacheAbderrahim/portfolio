@@ -2,13 +2,13 @@
 const config = useRuntimeConfig()
 const base = config.public.apiBase
 
-const { data: profilesData } = await useFetch(`${base}/profiles`)
-const { data: educationData } = await useFetch(`${base}/education`)
-const { data: portfolioData } = await useFetch(`${base}/portfolio`)
-const { data: skillsData } = await useFetch(`${base}/skills`)
-const { data: technologiesData } = await useFetch(`${base}/technologies`)
-const { data: languagesData } = await useFetch(`${base}/languages`)
-const { data: pubicationsData } = await useFetch(`${base}/publications`)
+const { data: profilesData } = await useFetch(`${base}/profiles/`)
+const { data: educationData } = await useFetch(`${base}/education/`)
+const { data: portfolioData } = await useFetch(`${base}/portfolio/`)
+const { data: skillsData } = await useFetch(`${base}/skills/`)
+const { data: technologiesData } = await useFetch(`${base}/technologies/`)
+const { data: languagesData } = await useFetch(`${base}/languages/`)
+const { data: pubicationsData } = await useFetch(`${base}/publications/`)
 
 const profiles = computed(() => profilesData.value || [])
 const education = computed(() => educationData.value || [])
